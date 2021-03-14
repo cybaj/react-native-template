@@ -3,23 +3,15 @@ module.exports = {
   extends: '@react-native-community',
   plugins: ['import'],
   settings: {
+    'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
     'import/resolver': {
+      'babel-module': {},
       node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.android.js', '.ios.js', '.android.ts', '.ios.ts'],
         paths: ['src'],
-        alias: {
-          _assets: './src/assets',
-          _components: './src/components',
-          _atoms: './src/components/atoms',
-          _molecules: './src/components/molecules',
-          _organisms: './src/components/organisms',
-          _navigations: './src/navigations',
-          _scenes: './src/scenes',
-          _services: './src/services',
-          _styles: './src/styles',
-          _utils: './src/utils',
-          _contexts: './src/contexts',
-          _user: './src/contexts/user'
-        },
       },
     },
   },

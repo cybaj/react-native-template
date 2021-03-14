@@ -30,7 +30,7 @@ const UserContextProvider = ({children}: Props) => {
 
   const getUserInfo = (): void => {
     AsyncStorage.getItem('token')
-      .then(value => {
+      .then((value) => {
         if (value) {
           setUserInfo({
             name: 'dev-yakuza',

@@ -13,7 +13,10 @@ const Stack = createStackNavigator();
 
 const AuthNavigator = () => {
   return (
-    <Stack.Navigator initialRouteName={AuthNavigatorConfig.initialRouteName}>
+    <Stack.Navigator
+      initialRouteName={AuthNavigatorConfig.initialRouteName}
+      header={AuthNavigatorConfig.header}
+      headerMode={AuthNavigatorConfig.headerMode}>
       <Stack.Screen name="Login" component={LoginScreen} />
     </Stack.Navigator>
   );

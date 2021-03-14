@@ -1,14 +1,19 @@
 import React from 'react';
 import {SafeAreaView, Text, TouchableHighlight} from 'react-native';
 
-const LoginScreen = ({navigation}) => (
+const HomeScreen = ({navigation}: any) => (
   <SafeAreaView>
-    <Text>Screen: Login</Text>
+    <Text>Screen: Home</Text>
 
-    <TouchableHighlight onPress={() => navigation.navigate('Home')}>
-      <Text>Go to home</Text>
+    <TouchableHighlight
+      onPress={() =>
+        navigation.navigate('AuthNavigator', {
+          screen: 'Login',
+        })
+      }>
+      <Text>Go to Login</Text>
     </TouchableHighlight>
   </SafeAreaView>
 );
 
-export default LoginScreen;
+export default HomeScreen;
